@@ -7,6 +7,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+/**
+ * 
+ * @author Javier Bajo Chacon  javier.bajochacon@gmail.com
+ *
+ */
 public class EjercicioColeccionesApplication {
 
 	public static void main(String[] args) {
@@ -17,6 +22,7 @@ public class EjercicioColeccionesApplication {
 		Scanner sc = new Scanner (System.in);
 		
 		do {
+			System.out.println("-------------------");
 			System.out.println("Seleccione una opcion");
 			System.out.println("Nuevo precio--> (1)");
 			System.out.println("Precio medio --> (2)");
@@ -24,10 +30,10 @@ public class EjercicioColeccionesApplication {
 			System.out.println("Precio minimo---> (4)");
 			System.out.println("Monstrar todos--> (5)");
 			System.out.println("Salir-->(0)");
+			System.out.println("-------------------");
 			opcion = sc.nextInt();	
 			
-			switch (opcion){
-			
+			switch (opcion){			
 			case 1:
 				System.out.println("Introduzca un precio");
 				lista.insertarPrecio(sc.nextFloat());
@@ -49,11 +55,8 @@ public class EjercicioColeccionesApplication {
 				break;
 			default:
 				System.out.println("Opcion errónea");
-				break;
-				
-			
-			}
-			
+				break;			
+			}			
 		}while(opcion!=0);
 		
 	}

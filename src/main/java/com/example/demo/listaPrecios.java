@@ -1,6 +1,5 @@
 package com.example.demo;
 
-import java.awt.List;
 import java.util.ArrayList;
 
 /**
@@ -32,14 +31,15 @@ public class listaPrecios {
 	 */
 	public float calcularPrecioMedio() {
 		
-		float suma = 0;
+		final float[] suma = new float[]{0};
+		
 		if(this.precios.size()>0) {
-		for (Float elemento : precios) {			
-			suma+=elemento;			
+			this.precios.forEach(k->{suma[0]+=k;});	
+			return suma[0]/this.precios.size();
 		}
-		return suma/precios.size();
-		}
-		else return suma;
+		else
+			return 0;
+		
 	}
 	
 	/**
@@ -47,16 +47,12 @@ public class listaPrecios {
 	 * @return precio maximo de la lista de precios
 	 */
 	public float calculaPrecioMaximo() {
-		float maximo = 0;
+		final float maximo[] = new float[] {0};
 		if(this.precios.size()>0) {
-			maximo =this.precios.get(0);
-		for (Float elemento : precios) {			
-			if (elemento > maximo)
-				maximo = elemento;
+			maximo[0] =this.precios.get(0);
+			this.precios.forEach(k->{if(k>maximo[0]) maximo[0] = k;});		
 		}
-		
-		}
-		return maximo;
+		return maximo[0];
 		
 	}
 	
@@ -65,17 +61,12 @@ public class listaPrecios {
 	 * @return precio minimo de la lista de precios
 	 */
 	public float calcularPrecioMinimo() {
-		float minimo = 0;
-		
+		final float minimo[] = new float[] {0};
 		if(this.precios.size()>0) {
-			minimo = this.precios.get(0);
-		for (Float elemento : precios) {			
-			if (elemento < minimo)
-				minimo = elemento;
+			minimo[0] =this.precios.get(0);
+			this.precios.forEach(k->{if(k<minimo[0]) minimo[0] = k;});
 		}
-		
-		}
-		return minimo;
+		return minimo[0];
 	}
 	
 	/**
