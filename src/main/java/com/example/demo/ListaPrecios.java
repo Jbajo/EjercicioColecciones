@@ -7,13 +7,13 @@ import java.util.ArrayList;
  * @author Javier Bajo Chacon  javier.bajochacon@gmail.com
  *
  */
-public class listaPrecios {
+public class ListaPrecios {
 	
-	private ArrayList<Float> precios;
+	private ArrayList<Double> precios;
 
-	public listaPrecios() {
+	public ListaPrecios() {
 		super();
-		this.precios = new ArrayList<Float>();
+		this.precios = new ArrayList<Double>();
 	}
 
 	
@@ -21,7 +21,7 @@ public class listaPrecios {
  * 	
  * @param precio precio a insertar en la listas de precios
  */
-	public void insertarPrecio(float precio) {
+	public void insertarPrecio(double precio) {
 		this.precios.add(precio);
 	}
 	
@@ -29,9 +29,9 @@ public class listaPrecios {
 	 * 
 	 * @return precio medio de la lista de precios
 	 */
-	public float calcularPrecioMedio() {
+	public double calcularPrecioMedio() {
 		
-		final float[] suma = new float[]{0};
+		final double[] suma = new double[]{0};
 		
 		if(this.precios.size()>0) {
 			this.precios.forEach(k->{suma[0]+=k;});	
@@ -46,8 +46,8 @@ public class listaPrecios {
 	 * 
 	 * @return precio maximo de la lista de precios
 	 */
-	public float calculaPrecioMaximo() {
-		final float maximo[] = new float[] {0};
+	public double calculaPrecioMaximo() {
+		final double maximo[] = new double[] {0};
 		if(this.precios.size()>0) {
 			maximo[0] =this.precios.get(0);
 			this.precios.forEach(k->{if(k>maximo[0]) maximo[0] = k;});		
@@ -60,8 +60,8 @@ public class listaPrecios {
 	 * 
 	 * @return precio minimo de la lista de precios
 	 */
-	public float calcularPrecioMinimo() {
-		final float minimo[] = new float[] {0};
+	public double calcularPrecioMinimo() {
+		final double minimo[] = new double[] {0};
 		if(this.precios.size()>0) {
 			minimo[0] =this.precios.get(0);
 			this.precios.forEach(k->{if(k<minimo[0]) minimo[0] = k;});

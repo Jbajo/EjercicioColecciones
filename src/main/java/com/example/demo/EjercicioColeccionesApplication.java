@@ -17,7 +17,7 @@ public class EjercicioColeccionesApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EjercicioColeccionesApplication.class, args);
 			
-		listaPrecios lista = new listaPrecios();
+		ListaPrecios lista = new ListaPrecios();
 		int opcion = 1;
 		Scanner sc = new Scanner (System.in);
 		
