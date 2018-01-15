@@ -22,6 +22,7 @@ public class Gestora {
 		System.out.println("Monstrar todos--> (5)");
 		System.out.println("Salir-->(0)");
 		System.out.println("-------------------");
+		
 		opcion = sc.nextInt();	
 		
 		switch (opcion){			

@@ -21,6 +21,7 @@ public class EjercicioColeccionesApplication {
 		SpringApplication.run(EjercicioColeccionesApplication.class, args);
 			
 		Gestora gestora = new Gestora();
+		
 		gestora.showMenu();
 		
 }

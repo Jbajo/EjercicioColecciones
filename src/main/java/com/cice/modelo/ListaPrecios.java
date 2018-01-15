@@ -64,6 +64,7 @@ public class ListaPrecios {
 		final double minimo[] = new double[] {0};
 		if(this.precios.size()>0) {
 			minimo[0] =this.precios.get(0);
+			
 			this.precios.forEach(k->{if(k<minimo[0]) minimo[0] = k;});
 		}
 		return minimo[0];
